@@ -13,6 +13,15 @@ var myObject = {
 
 function max(a, b){
     // YOUR CODE HERE
+    if (a > b) {
+      return a
+    }
+    else if (b > a) {
+      return b
+    }
+    else {
+      return 0
+    }
 }
 
 console.assert(max(1,3) === 3);
@@ -31,6 +40,19 @@ console.assert(isNaN(max("aaa","bbb")));
 
 function maxOfThree(a, b, c){
     // YOUR CODE HERE
+    if (a > b && a > c) {
+      return a
+    }
+    else if (b > a && b > c) {
+      return b
+    }
+    else if (c > a && c > b) {
+      return c
+    }
+    else {
+      return 1
+    }
+
 }
 
 console.assert(maxOfThree(1,3,2) === 3);
@@ -49,6 +71,20 @@ console.assert(isNaN(maxOfThree("aaa","bbb","ccc")));
 
 function isVowel(char){
     // YOUR CODE HERE
+
+    if (!isNaN(char)) {
+      return false
+    }
+    else {
+       var charLow = char.toLowerCase();
+
+      if (charLow === "a" || charLow === "e" || charLow === "i" || charLow === "o" || charLow === "u") {
+        return true
+      }
+      else {
+        return false
+      }
+    }
 }
 
 console.assert(isVowel(0) === false);
@@ -71,6 +107,21 @@ console.assert(isVowel("E") === true);
 
 function rovarspraket(text){
     // YOUR CODE HERE
+    if (!isNaN(text)) {
+      return text += ""
+    }
+    else {
+       var spraket = "";
+    }
+    for (var i = 0; i < text.length; i++) {
+       if (text[i] != "a" && text[i] != "i" ) {
+         spraket += text[i] + "o" + text[i]
+       }
+       else {
+         spraket += text[i]
+       }
+    }
+    return spraket
 }
 
 console.assert(rovarspraket("a") === "a")
@@ -90,6 +141,12 @@ console.assert(rovarspraket(0) === "0")
 
 function reverse(str){
     // YOUR CODE HERE
+    var backwards = "";
+    for (var i = str.length - 1; i >= 0; i--) {
+
+      backwards += str[i];
+    }
+    return backwards
 }
 
 console.assert(reverse("books") === "skoob")
@@ -106,6 +163,16 @@ console.assert(reverse("we don't want no trouble") === "elbuort on tnaw t'nod ew
 
 function findLongestWord(sentence){
     // YOUR CODE HERE
+    var betterSentence = sentence.replace("'", "");
+    var words = betterSentence.split(" ");
+    var longest = "";
+    for (var i = 0; i < words.length; i++) {
+      var word = words[i];
+      if (word.length > longest.length) {
+        longest = word
+      }
+    }
+    return longest
 }
 
 console.assert(findLongestWord("book dogs") === "book")
