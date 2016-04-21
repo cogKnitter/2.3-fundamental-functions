@@ -28,7 +28,9 @@ function doSomethingCool() {
 }
 
 // Put your answer below -------------------------
-
+var doSomethingCool = function () {
+  console.log("Something Cool!");
+};
 
 // -----------------------------------------------
 
@@ -48,7 +50,9 @@ function sayHi() {
 setTimeout(sayHi, 2000);
 
 // Put your answer below -------------------------
-
+var sayHi = setTimeout(function () {
+  alert("Hello, World"); }, 2000);
+// } setTimeout(sayHi, 2000);
 
 // -----------------------------------------------
 
@@ -78,7 +82,7 @@ letter = "z";
 console.log("The letter is", letter);
 
 // Put your answer below -------------------------
-
+it will print answer c, (z then y) becuase the timeout on the function makes it so that the y is briefly delayed.
 
 // -----------------------------------------------
 
@@ -100,7 +104,9 @@ var reverseStr = function(str) {
 };
 
 // Put your answer below -------------------------
-
+var betterReverseStr = function(str) {
+  return str.split("").reverse().join("");
+};
 
 // -----------------------------------------------
 
@@ -131,7 +137,10 @@ var spanishColor = function(colorName) {
 };
 
 // Put your answer below -------------------------
+var betterSpanishColor = function(colorName) {
+  var betterColorName = colorName.toLowerCase;
 
+}
 
 // -----------------------------------------------
 
@@ -148,7 +157,8 @@ var spanishColor = function(colorName) {
 var foo = "bar";
 
 // Put your answer below -------------------------
-
+var foo;
+foo = "bar";
 
 // -----------------------------------------------
 
