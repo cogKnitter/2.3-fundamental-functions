@@ -82,7 +82,7 @@ letter = "z";
 console.log("The letter is", letter);
 
 // Put your answer below -------------------------
-it will print answer c, (z then y) becuase the timeout on the function makes it so that the y is briefly delayed.
+// it will print answer c, (z then y) becuase the timeout on the function makes it so that the y is briefly delayed.
 
 // -----------------------------------------------
 
@@ -138,25 +138,32 @@ var spanishColor = function(colorName) {
 
 // Put your answer below -------------------------
 var betterSpanishColor = function(colorName) {
-  var betterColorName = colorName.toLowerCase;
+ var betterColorName = colorName.toLowerCase();
 
-  {
-    colorSpanish:  "rojo",
-    colorHex: "#ff0000"
-  },
-  {
-    colorSpanish:  "blanco",
-    colorHex: "#ffffff"
-  },
-  {
-    colorSpanish:  "azul",
-    colorHex: "#0000ff"
-  },
-  {
-    colorSpanish:  "verde",
-    colorHex: "#00ff00"
-  }
-}
+
+ var colors = {
+   "rojo": {
+     colorHex: "#ff0000"
+   },
+   "blanco": {
+     colorHex: "#ffffff"
+   },
+   "azul": {
+     colorHex: "#0000ff"
+   },
+   "verde": {
+     colorHex: "#00ff00"
+   }
+ }
+
+
+  var hex = colors[betterColorName].colorHex
+  return hex
+
+};
+
+
+
 
 // -----------------------------------------------
 
@@ -197,7 +204,7 @@ var callTenTimes = function(callback) {
 
 // Put your answer below -------------------------
 var callNTimes = function(callback, number) {
-  
+
   var range = _.range(number);
   _.each(range, callback);
 };
@@ -230,6 +237,17 @@ var decreaseScore = function() {
 // Put your answer below -------------------------
 
 
+
+var increaseScore = function() {
+  var score = 0;
+  score++;
+};
+
+var decreaseScore = function() {
+  var score = 0;
+  score--;
+};
+
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -248,6 +266,11 @@ var addNumbers = function(numberA, numberB) {
 var twoPlusTwo = addNumbers(2,2);
 
 // Put your answer below -------------------------
+var addNumbers = function(numberA, numberB) {
+  var twoPlusTwo = (numberA + numberB);
+
+  return twoPlusTwo
+};
 
 
 // -----------------------------------------------
@@ -270,7 +293,14 @@ var twoPlusTwo = addNumbers(2,2);
 var speed = 0;
 
 var accelerate = function(amount) {
-  speed += amount;
+  if(isNaN(amount)) {
+    speed += 1;
+    return speed
+  }
+  else {
+      speed += amount;
+      return speed
+  }
 };
 
 // Put your answer below -------------------------
