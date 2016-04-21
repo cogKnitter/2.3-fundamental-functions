@@ -140,6 +140,22 @@ var spanishColor = function(colorName) {
 var betterSpanishColor = function(colorName) {
   var betterColorName = colorName.toLowerCase;
 
+  {
+    colorSpanish:  "rojo",
+    colorHex: "#ff0000"
+  },
+  {
+    colorSpanish:  "blanco",
+    colorHex: "#ffffff"
+  },
+  {
+    colorSpanish:  "azul",
+    colorHex: "#0000ff"
+  },
+  {
+    colorSpanish:  "verde",
+    colorHex: "#00ff00"
+  }
 }
 
 // -----------------------------------------------
@@ -180,7 +196,11 @@ var callTenTimes = function(callback) {
 };
 
 // Put your answer below -------------------------
-
+var callNTimes = function(callback, number) {
+  
+  var range = _.range(number);
+  _.each(range, callback);
+};
 
 // -----------------------------------------------
 
